@@ -18,64 +18,44 @@
     <!-- Iconos -->
     <script src="https://kit.fontawesome.com/665e751bd8.js" crossorigin="anonymous"></script>
     <!-- ------ -->
+
+    <script src="main.js" type="module" defer></script>
 </head>
 <body>
     <div class="overflow-hidden position-relative d-flex p-0 m-0 justify-content-center align-content-center">
-        <div class="imagen-Banner col-12 object-fill-contain position-absolute">
+        <div class="imagen-Banner col-12  position-absolute">
             <img src="img/1366_2000.png" alt="">
         </div>
-        
-        <div class="col-6 col-xl-5 text-center py-5 position-relative">
-            <h4 class="mb-4 text-white">Presupuesto Disponible</h4>
-            <h1 class="mb-4 text-white">$ 12.000.0000</h4>
-
-            <div class="col-12 bg-info mb-2 py-2 d-flex justify-content-around">
-                <p class="m-0 text-white">INGRESOS</p>
-                <p class="m-0 text-white">$ 3.000.000</p>
-            </div>
-            <div class="col-12 bg-danger py-2 d-flex justify-content-around">
-                <p class="m-0 v text-white">EGRESOS</p>
-                <p class="m-0 text-white">$ 1.000.000</p>
-            </div>
-        </div>
+        <div id="myHeader" class="col-11 col-md-6 col-xl-5 text-center py-5 position-relative"></div>
     </div>
 
-    <div class="col-12 border-bottom bg-light text-center d-flex p-0 m-0 justify-content-center">
+    <div class="col-12 border-bottom bg-light text-center d-flex justify-content-center p-0 m-0">
         <div class="col-12 col-md-8 col-lg-7 p-2 align-content-between">
-            <form action="" class="d-flex justify-content-around">
-                <select name="" id="" class="p-2 col-2 col-sm-1">
-                    <option value="">+</option>
-                    <option value="">-</option>
+            <form id="formulario" class="d-flex flex-column justify-content-center align-items-center flex-sm-row">
+                <select name="opcion" class="p-2 col-3 col-sm-1 me-sm-1">
+                    <option value="ingreso">+</option>  
+                    <option value="egreso">-</option>
                 </select>
     
-                <input type="text" class="p-1 col-6 col-sm-7">
+                <input required type="text" name="descripcion" placeholder="Descripción" class="col-11 col-sm-7 p-1 mt-1 mt-sm-0 me-sm-1">
     
-                <input type="number" class="p-1 col-2" placeholder="$">
+                <input required type="number" name="valor" class="col-9 col-sm-2 p-1 mt-1 mt-sm-0 me-sm-1" placeholder="$">
     
-                <input type="button" class="btn-enviar p-2" value="enviar">
+                <button type="submit" class="mt-1 mt-sm-0 rounded-circle border-0 boton bg-transparent">
+                    <i class="fa-regular fa-circle-check" style="color: #3fd942; font-size: 25px;"></i>
+                </button> 
             </form>
         </div>
     </div>
 
-    <div class="col-12 d-block d-lg-flex justify-content-center pt-4 px-5 mt-5">
-        <div class="col-12 col-sm-12 col-lg-6 col-xl-4 mx-md-3">
+    <div class="col-12 d-block d-md-flex justify-content-center pt-4 px-2 px-sm-5 mt-5">
+        <div class="col-12 col-md-6 col-xl-4 mx-md-3">
             <h4 class="border-bottom p-2">INGRESOS</h4>
-            <table class="col-12">
-                <tr class="d-flex p-2 border-bottom">
-                    <td class="col-8 fs-5">Auxilio de transporte</td>
-                    <td class="col-4 fs-5 text-success">+$ 300.000</td>
-                </tr>
-            </table>
+            <table class="col-12" id="tablaIngreso"></table>
         </div>
-        <div class="col-12 col-sm-12 col-lg-6 col-xl-4 mx-md-3 mt-5 mb-5 mt-lg-0">
+        <div class="col-12 col-sm-12 col-md-6 col-xl-4 mx-md-3 mt-5 mt-md-0 mb-5 mt-lg-0">
             <h4 class="border-bottom p-2">EGRESOS</h4>
-            <table class="col-12">
-                <tr class="d-flex p-2 border-bottom">
-                    <td class="col-7 fs-5">Comida del gato</td>
-                    <td class="col-3 fs-5 text-danger">-$ 70.000</td>
-                    <td class="col-2 fs-5 m-0 p-0 bg-danger rounded text-white text-center" style="--bs-bg-opacity: .4;">13 %</td>
-                </tr>
-            </table>
+            <table class="col-12" id="tablaEgreso"></table>
         </div>
     </div>
     

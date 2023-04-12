@@ -1,6 +1,6 @@
 .imagen-Banner img{
     width: 100%;
-    height: 100%;
+    height: 100vh;
     z-index: -10;
 }
 
@@ -8,4 +8,45 @@ input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button { 
   -webkit-appearance: none; 
   margin: 0; 
+}
+
+@media (max-width: 318px){
+  .responsive{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  .descripciones{
+    width: 100%;
+  }
+
+  .valores{
+    width: 100%;
+  }
+
+  .porcentajes{
+    width: 50%;
+  }
+}
+
+@media (max-width: 575px){
+  .responsive{
+    width: 100%;
+  }
+
+  .descripciones{
+    width: 120%;
+  }
+
+  .valores{
+    width: 70%;
+  }
+
+  .porcentajes{
+    width: 50%;
+  }
 }
